@@ -1,14 +1,17 @@
 var express = require("express");
-var exphbs = require("express-handlebars");
+//var exphbs = require("express-handlebars");
 
-var router = express.Router();
+var app = express();
 
-router.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
 
-router.get("/saved", (req, res) => {
+app.get("/saved", (req, res) => {
 	res.render("saved");
 });
 
-module.exports = router;
+
+// app.use ('/Articles', require('models/Articles'));
+// app.use('/Notes', require('models/Notes'));
+module.exports = app;
